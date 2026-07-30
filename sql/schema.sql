@@ -47,6 +47,7 @@ INSERT INTO movies (title, genre, language, show_time, price, total_seats) VALUE
 
 -- auto seats A1-A10 per movie
 INSERT INTO seats (movie_id, seat_no)
+
 SELECT m.id, CONCAT('A', n.n)
 FROM movies m
 JOIN (SELECT 1 n UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5
